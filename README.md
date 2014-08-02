@@ -5,17 +5,23 @@ The idea of journey.js to provide an easy way to build an online presentation wi
 ## Features
 
 ### Text typing animation
+```html
     <p class="journey-slide auto-type">some text</p>
-
+```
 ### audio
+```html
     <audio id="journey-audio" src="bla"/>
+```
 You can specify a piece of audio for the presentation. The idea that the presentation will play automatically while the music is playing. And the presentation will end when the music ends.
 
 ### img slide
+```html
     <img class="journey-slide" src="bla.png"/>
-
+```
 ### slide duration
+```html
     <p class="journey-slide" data-duration="3">some text</p>
+```
 be specific about how many seconds should be spent on this slide. If omitted, journey.js will evenly distribute certain amount of time for each slide based on the time left (length of the audio - time guaranteed to other slides)/(num of slides - num of slides w/ specific duration configuration)
 
 ### API
