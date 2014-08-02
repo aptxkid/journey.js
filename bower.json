@@ -21,6 +21,6 @@
     "bower_components",
     "test",
     "tests",
-    "resources",
+    "resources"
   ]
 }
