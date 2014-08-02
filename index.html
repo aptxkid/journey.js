@@ -5,9 +5,6 @@
   <meta charset="utf-8"/>
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
   <link href="css/journey-demo.css" rel="stylesheet" />
-  <!-- start Mixpanel --><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
-for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
-  mixpanel.init("587b593a5515275a6ca2f63fd72c3ad1");</script><!-- end Mixpanel -->
 </head>
 <body>
 <div id="loading">
@@ -217,7 +214,6 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
         return;
       } else {
         $('#loading')[0].innerHTML = "You browser is not supported. Please try again with Chrome 35+, Firefox 29+, Safari 6+ or IE 11.";
-        mixpanel.track("Browser not supported");
         not_supported = true;
         return;
       }
@@ -230,21 +226,17 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
         if (!is_playing && !is_paused) {
           is_playing = true;
           journey.play();
-          mixpanel.track("journey play");
         } else if (is_playing && !is_paused) {
           is_paused = true;
           journey.pause();
-          mixpanel.track("journey pause");
         } else if (is_playing && is_paused) {
           is_paused = false;
           journey.resume();
-          mixpanel.track("journey resume");
         }
       }
     };
     window.onkeydown = key_down;
     //initialization finished
-    mixpanel.track("journey loaded");
     $('#loading')[0].style['display'] = 'none';
     $('#hint')[0].style['display'] = 'block';
   }
@@ -253,10 +245,6 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
   $(document).ready(init);
   $('#journey-audio')[0].addEventListener('loadedmetadata', init);
 </script>
-
-<footer>
-  <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
-</footer>
 
 </body>
 </html>
