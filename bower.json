@@ -1,0 +1,25 @@
+{
+  "name": "journey.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/aptxkid/journey.js",
+  "authors": [
+    "Lu Pan <panlu1412@gmail.com>"
+  ],
+  "description": "Automated online presentation with audio",
+  "main": "js/journey.js",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "journey.js"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
